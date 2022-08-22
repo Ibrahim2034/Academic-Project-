@@ -1,0 +1,29 @@
+body{
+	background-color:#9b59b6;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:100px;
+}
+.input-1{
+    border: 1px solid red;
+}
+.input-2{
+    border: 1px solid red;
+}
+.container{
+	background-color:#fff;
+	border-radius:5px;
+	box-shadow:0 2px 5px black;
+	width:450px;
+	height:300px;
+	overflow:hidden;
+}
+.header{
+	background-color:#00d2b3;
+	border-bottom:1px solid black;
+	padding:10px 10px;
+}
+.header h3{
+	text-align:center;
+}
