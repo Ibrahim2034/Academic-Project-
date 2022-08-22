@@ -1,0 +1,64 @@
+<!-- 
+
+<?php
+session_start();
+$conn = new mysqli('localhost', 'root', '', 'userinformation');
+if(!$conn){
+    echo 'Not connect';
+}
+$emptyemail = '';
+$emptypassword = '';
+
+
+if(isset($_POST['submit'])){
+
+    $md5UserPassword = md5($password);
+
+
+
+    if(!empty($email) && !empty($password)){
+        
+        $sql = "SELECT * FROM users WHERE Email = '$email' AND Passwordd = '$md5UserPassword' ";
+        $query = $conn->query($sql);
+
+        if($query->num_rows > 0){
+            $_SESSION['login'] = 'login susccess';
+            
+            header('location:admin.php');
+
+
+
+        }else{
+            echo 'Not found';
+            echo $sql;
+        }
+    }
+}
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id=""error></div>
+    <form id="form" action="/" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input id="uname" name="uname" type="text">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="pass" name="pass" type="password">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
